@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>day 6作业1</title>
+  <style>
+    * {
+
+      margin: 0;
+      padding: 0;
+      /* 重置内外边距为0 */
+      box-sizing: border-box;
+      /* 将border和padding数值包含在width和height之内 ，修改border和padding数值盒子的大小不变。*/
+    }
+
+    /* 最外层大盒子，负责将所有可见元素封装在页面上。*/
+    .wrapper {
+      width: 1226px;
+      margin: 0 auto;
+      /* 宽1226，外边距为0 */
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /* 设置列表项前无标记 */
+
+    /* 盒子 */
+    .box {
+      height: 614px;
+      background-color: pink;
+    }
+
+    /* 左侧紫色块 */
+    .left {
+      float: left;
+      /* 设置左浮动 */
+      width: 234px;
+      height: 614px;
+      background-color: #800080;
+    }
+
+    /* 右侧产品图 */
+    .right {
+      float: right;
+      /* 设置右浮动 */
+      width: 978px;
+      height: 614px;
+
+    }
+
+    /* 产品列表 */
+    .box .right li {
+      float: left;
+      /* 左浮动 */
+      margin: 0 14px 14px 0;
+      /* 上和左边距为0，右和下为14 */
+      width: 234px;
+      height: 300px;
+      background-color: #87ceeb;
+    }
+
+    /* 使用选择器选择第4和8的标签，把他们右侧边距归零*/
+    .box .right li:nth-child(4n) {
+      margin-right: 0;
+    }
+
+    /* 使用选择器选择第五行及以后的下边距设置为0*/
+    .box .right li:nth-child(n+5) {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 盒子 -->
+  <div class="box wrapper ">
+    <!-- 左侧紫色块 -->
+    <div class="left"></div>
+    <!-- 右侧产品图 -->
+    <div class="right">
+      <!-- 产品列表 -->
+      <ul>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+      </ul>
+    </div>
+  </div>
+  <br>
+  <img src="1.png">
+  <img src="2.png">
+  <img src="3.png" alt="404">
+</body>
+
+</html>
